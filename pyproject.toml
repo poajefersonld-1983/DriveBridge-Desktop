@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drivebridge-desktop"
+version = "0.1.0"
+description = "Cliente leve de sincronização de pastas com Google Drive para Linux"
+requires-python = ">=3.10"
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = ["google-api-python-client>=2.100,<3", "google-auth-oauthlib>=1.2,<2", "google-auth-httplib2>=0.2,<1", "httplib2>=0.19,<1"]
+
+[project.scripts]
+drivebridge = "drivebridge.app:main"
+
+[tool.setuptools.packages.find]
+include = ["drivebridge*"]
+
